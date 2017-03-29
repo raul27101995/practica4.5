@@ -19,6 +19,7 @@ public class Practica44 {
     public static void main(String[] args) {
         boolean salir=false;
         String numero = "";
+        
 
         do {
             System.out.println("MENU:");
@@ -64,7 +65,7 @@ public class Practica44 {
                 case "10":
                 case "11":
                 case "12":
-                case "13": System.out.println("Soy Sergio");
+                case "13": String nombre = "Sergio";System.out.println(nombre);break;
                 case "14":
                 case "15":
                 case "16":
