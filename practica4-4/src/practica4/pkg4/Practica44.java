@@ -64,7 +64,7 @@ public class Practica44 {
                 case "10":
                 case "11":
                 case "12":
-                case "13":
+                case "13": System.out.println("Soy Sergio");
                 case "14":
                 case "15":
                 case "16":
