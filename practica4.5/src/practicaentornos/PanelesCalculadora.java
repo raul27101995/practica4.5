@@ -118,7 +118,19 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         btnLimpiarJGF = new javax.swing.JButton();
         btnSalirJGF = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
+        paneldulce = new javax.swing.JPanel();
+        etiquetanumero1 = new javax.swing.JLabel();
+        etiquetanumero2 = new javax.swing.JLabel();
+        etiquetaresultado = new javax.swing.JLabel();
+        dulcenumero1 = new javax.swing.JTextField();
+        dulcenumero2 = new javax.swing.JTextField();
+        dulceresultado = new javax.swing.JTextField();
+        suma = new javax.swing.JButton();
+        resta = new javax.swing.JButton();
+        multiplica = new javax.swing.JButton();
+        divide = new javax.swing.JButton();
+        borrar = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         botonlimpiar1_Hicham = new javax.swing.JButton();
@@ -1003,20 +1015,130 @@ public class PanelesCalculadora extends javax.swing.JFrame {
 
         getContentPane().add(jPanel11);
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Dulce"));
+        paneldulce.setBorder(javax.swing.BorderFactory.createTitledBorder("Dulce"));
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
+        etiquetanumero1.setText("Numero1:");
+
+        etiquetanumero2.setText("Numero2:");
+
+        etiquetaresultado.setText("Resultado:");
+
+        suma.setText("+");
+        suma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumaActionPerformed(evt);
+            }
+        });
+
+        resta.setText("-");
+        resta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restaActionPerformed(evt);
+            }
+        });
+
+        multiplica.setText("*");
+        multiplica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicaActionPerformed(evt);
+            }
+        });
+
+        divide.setText("/");
+        divide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divideActionPerformed(evt);
+            }
+        });
+
+        borrar.setText("Borrar");
+        borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrarActionPerformed(evt);
+            }
+        });
+
+        salir.setText("salir");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout paneldulceLayout = new javax.swing.GroupLayout(paneldulce);
+        paneldulce.setLayout(paneldulceLayout);
+        paneldulceLayout.setHorizontalGroup(
+            paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneldulceLayout.createSequentialGroup()
+                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneldulceLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(paneldulceLayout.createSequentialGroup()
+                                .addComponent(etiquetaresultado)
+                                .addGap(18, 18, 18)
+                                .addComponent(dulceresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(paneldulceLayout.createSequentialGroup()
+                                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(etiquetanumero2, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(etiquetanumero1, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(23, 23, 23)
+                                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dulcenumero1)
+                                    .addComponent(dulcenumero2))))
+                        .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(paneldulceLayout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(suma)
+                                    .addComponent(multiplica))
+                                .addGap(18, 18, 18)
+                                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(resta)
+                                    .addComponent(divide)))
+                            .addGroup(paneldulceLayout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(borrar))))
+                    .addGroup(paneldulceLayout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addComponent(salir)))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 262, Short.MAX_VALUE)
+        paneldulceLayout.setVerticalGroup(
+            paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneldulceLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etiquetanumero1)
+                    .addComponent(dulcenumero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suma)
+                    .addComponent(resta))
+                .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneldulceLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(divide)
+                            .addComponent(multiplica))
+                        .addGap(18, 18, 18)
+                        .addComponent(borrar))
+                    .addGroup(paneldulceLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(etiquetanumero2)
+                            .addComponent(dulcenumero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(paneldulceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(paneldulceLayout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(etiquetaresultado))
+                            .addGroup(paneldulceLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(dulceresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(salir)
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel12);
+        getContentPane().add(paneldulce);
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Pedro"));
 
@@ -1571,6 +1693,40 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSalirJGFActionPerformed
 
+    private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
+        dulcenumero1.setText("");
+        dulcenumero2.setText("");
+        dulceresultado.setText("");
+    }//GEN-LAST:event_borrarActionPerformed
+
+    private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
+      double num1 = Double.parseDouble(dulcenumero1.getText());
+       double num2 = Double.parseDouble(dulcenumero2.getText());
+       dulceresultado.setText(String.valueOf(num1+num2));
+    }//GEN-LAST:event_sumaActionPerformed
+
+    private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
+      double num1 = Double.parseDouble(dulcenumero1.getText());
+       double num2 = Double.parseDouble(dulcenumero2.getText());
+       dulceresultado.setText(String.valueOf(num1-num2));
+    }//GEN-LAST:event_restaActionPerformed
+
+    private void multiplicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicaActionPerformed
+        double num1 = Double.parseDouble(dulcenumero1.getText());
+       double num2 = Double.parseDouble(dulcenumero2.getText());
+       dulceresultado.setText(String.valueOf(num1*num2));
+    }//GEN-LAST:event_multiplicaActionPerformed
+
+    private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
+      double num1 = Double.parseDouble(dulcenumero1.getText());
+       double num2 = Double.parseDouble(dulcenumero2.getText());
+       dulceresultado.setText(String.valueOf(num1/num2));
+    }//GEN-LAST:event_divideActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_salirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1616,6 +1772,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JTextField Resultado_Alejandro;
     private javax.swing.JButton Salir_Alejandro;
     private javax.swing.JButton Sumar_Alejandro;
+    private javax.swing.JButton borrar;
     private javax.swing.JButton botoncerra;
     private javax.swing.JButton botondividi;
     private javax.swing.JButton botondividir;
@@ -1640,12 +1797,19 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JTextField cajados;
     private javax.swing.JTextField cajatres;
     private javax.swing.JTextField cajauno;
+    private javax.swing.JButton divide;
     private javax.swing.JButton divide_ra;
     private javax.swing.JButton dividir_sergio;
     private javax.swing.JButton division_Hicham;
+    private javax.swing.JTextField dulcenumero1;
+    private javax.swing.JTextField dulcenumero2;
+    private javax.swing.JTextField dulceresultado;
     private javax.swing.JLabel etiquetaPrimerNumero_sergio;
     private javax.swing.JLabel etiquetaResultado_sergio;
     private javax.swing.JLabel etiquetaSegundoNumero_sergio;
+    private javax.swing.JLabel etiquetanumero1;
+    private javax.swing.JLabel etiquetanumero2;
+    private javax.swing.JLabel etiquetaresultado;
     private javax.swing.JLabel insertaprimero_ra;
     private javax.swing.JLabel insertasegundo_ra;
     private javax.swing.JButton jButton1;
@@ -1663,7 +1827,6 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -1682,6 +1845,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JLabel lblSegundoNumeroJGF;
     private javax.swing.JButton limpia_ra;
     private javax.swing.JButton limpia_sergio;
+    private javax.swing.JButton multiplica;
     private javax.swing.JButton multiplica_ra;
     private javax.swing.JButton multiplica_sergio;
     private javax.swing.JButton multiplicacion_Hicham;
@@ -1694,12 +1858,16 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JTextField numerodos_ra;
     private javax.swing.JTextField numerotres_ra;
     private javax.swing.JTextField numerouno_ra;
+    private javax.swing.JPanel paneldulce;
     private javax.swing.JPanel panelraquel;
     private javax.swing.JTextField res_sergio;
+    private javax.swing.JButton resta;
     private javax.swing.JButton resta_ra;
     private javax.swing.JButton resta_sergio;
     private javax.swing.JTextField resultado;
     private javax.swing.JLabel resultado_ra;
+    private javax.swing.JButton salir;
+    private javax.swing.JButton suma;
     private javax.swing.JButton suma_ra;
     private javax.swing.JButton suma_sergio;
     private javax.swing.JButton sumar_Hicham;
