@@ -105,6 +105,18 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
+        lblPrimerNumeroJGF = new javax.swing.JLabel();
+        lblSegundoNumeroJGF = new javax.swing.JLabel();
+        lblResultadoJGF = new javax.swing.JLabel();
+        txtPrimerNumeroJGF = new javax.swing.JTextField();
+        txtSegundoNumeroJGF = new javax.swing.JTextField();
+        txtResultadoJGF = new javax.swing.JTextField();
+        btnSumarJGF = new javax.swing.JButton();
+        btnRestarJGF = new javax.swing.JButton();
+        btnMultiplicarJGF = new javax.swing.JButton();
+        btnDividirJGF = new javax.swing.JButton();
+        btnLimpiarJGF = new javax.swing.JButton();
+        btnSalirJGF = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
@@ -218,7 +230,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                     .addComponent(botondividir)
                     .addComponent(botonrestar)
                     .addComponent(botonmultiplicar))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         jpanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botondividir, botonlimpiar, botonmultiplicar, botonrestar, botonsalir, botonsumar});
@@ -382,7 +394,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,7 +481,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                     .addComponent(Sumar_Alejandro, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Multiplicar_Alejandro)
                     .addComponent(Dividir_Alejandro, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         Panel_AlejandroVFLayout.setVerticalGroup(
             Panel_AlejandroVFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -572,7 +584,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addComponent(jButton5)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -694,7 +706,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                         .addComponent(suma_sergio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(resta_sergio)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         Panel_SergioLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {num1_sergio, num2_sergio});
@@ -833,7 +845,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -848,7 +860,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -859,15 +871,119 @@ public class PanelesCalculadora extends javax.swing.JFrame {
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Jesus Garcia"));
 
+        lblPrimerNumeroJGF.setText("Primer Número:");
+
+        lblSegundoNumeroJGF.setText("Segundo Número:");
+
+        lblResultadoJGF.setText("Resultado:");
+
+        txtSegundoNumeroJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSegundoNumeroJGFActionPerformed(evt);
+            }
+        });
+
+        btnSumarJGF.setText("+");
+        btnSumarJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumarJGFActionPerformed(evt);
+            }
+        });
+
+        btnRestarJGF.setText("-");
+        btnRestarJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestarJGFActionPerformed(evt);
+            }
+        });
+
+        btnMultiplicarJGF.setText("*");
+        btnMultiplicarJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarJGFActionPerformed(evt);
+            }
+        });
+
+        btnDividirJGF.setText("/");
+        btnDividirJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividirJGFActionPerformed(evt);
+            }
+        });
+
+        btnLimpiarJGF.setText("Limpiar");
+        btnLimpiarJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarJGFActionPerformed(evt);
+            }
+        });
+
+        btnSalirJGF.setText("Salir");
+        btnSalirJGF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirJGFActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSegundoNumeroJGF)
+                    .addComponent(lblPrimerNumeroJGF)
+                    .addComponent(lblResultadoJGF))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btnSalirJGF)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtPrimerNumeroJGF, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                            .addComponent(txtSegundoNumeroJGF)
+                            .addComponent(txtResultadoJGF))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnSumarJGF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnMultiplicarJGF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnRestarJGF, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnDividirJGF, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(118, 118, 118))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(btnLimpiarJGF)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 262, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPrimerNumeroJGF)
+                    .addComponent(txtPrimerNumeroJGF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSumarJGF)
+                    .addComponent(btnRestarJGF))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSegundoNumeroJGF)
+                    .addComponent(txtSegundoNumeroJGF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMultiplicarJGF)
+                    .addComponent(btnDividirJGF))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblResultadoJGF)
+                    .addComponent(txtResultadoJGF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpiarJGF))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSalirJGF)
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel10);
@@ -878,7 +994,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -893,7 +1009,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -908,7 +1024,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1005,7 +1121,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                         .addComponent(multiplicacion_Hicham)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(sumar_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(83, 83, Short.MAX_VALUE))
+                .addGap(112, 112, Short.MAX_VALUE))
         );
 
         jPanel14Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botonlimpiar1_Hicham, botonrestar_Hicham, botonsalir3_Hicham, division_Hicham, multiplicacion_Hicham, sumar_Hicham});
@@ -1043,7 +1159,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1058,7 +1174,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGap(0, 398, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1385,6 +1501,76 @@ public class PanelesCalculadora extends javax.swing.JFrame {
 
     }//GEN-LAST:event_limpia_raActionPerformed
 
+    private void txtSegundoNumeroJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSegundoNumeroJGFActionPerformed
+        // :(
+    }//GEN-LAST:event_txtSegundoNumeroJGFActionPerformed
+
+    private void btnSumarJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarJGFActionPerformed
+        String numero1=txtPrimerNumeroJGF.getText();
+        String numero2=txtSegundoNumeroJGF.getText();
+
+        int n1=Integer.parseInt(numero1);
+        int n2=Integer.parseInt(numero2);
+
+        int resultado=n1+n2;
+
+        String res=String.valueOf(resultado);
+
+        txtResultadoJGF.setText(res);
+    }//GEN-LAST:event_btnSumarJGFActionPerformed
+
+    private void btnRestarJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarJGFActionPerformed
+        String numero1=txtPrimerNumeroJGF.getText();
+        String numero2=txtSegundoNumeroJGF.getText();
+
+        int n1=Integer.parseInt(numero1);
+        int n2=Integer.parseInt(numero2);
+
+        int resultado=n1-n2;
+
+        String res=String.valueOf(resultado);
+
+        txtResultadoJGF.setText(res);
+    }//GEN-LAST:event_btnRestarJGFActionPerformed
+
+    private void btnMultiplicarJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarJGFActionPerformed
+        String numero1=txtPrimerNumeroJGF.getText();
+        String numero2=txtSegundoNumeroJGF.getText();
+
+        int n1=Integer.parseInt(numero1);
+        int n2=Integer.parseInt(numero2);
+
+        int resultado=n1*n2;
+
+        String res=String.valueOf(resultado);
+
+        txtResultadoJGF.setText(res);
+    }//GEN-LAST:event_btnMultiplicarJGFActionPerformed
+
+    private void btnDividirJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirJGFActionPerformed
+        String numero1=txtPrimerNumeroJGF.getText();
+        String numero2=txtSegundoNumeroJGF.getText();
+
+        int n1=Integer.parseInt(numero1);
+        int n2=Integer.parseInt(numero2);
+
+        int resultado=n1/n2;
+
+        String res=String.valueOf(resultado);
+
+        txtResultadoJGF.setText(res);
+    }//GEN-LAST:event_btnDividirJGFActionPerformed
+
+    private void btnLimpiarJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarJGFActionPerformed
+        txtPrimerNumeroJGF.setText("");
+        txtSegundoNumeroJGF.setText("");
+        txtResultadoJGF.setText("");
+    }//GEN-LAST:event_btnLimpiarJGFActionPerformed
+
+    private void btnSalirJGFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirJGFActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirJGFActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1445,6 +1631,12 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonsalir3_Hicham;
     private javax.swing.JButton botonsuma;
     private javax.swing.JButton botonsumar;
+    private javax.swing.JButton btnDividirJGF;
+    private javax.swing.JButton btnLimpiarJGF;
+    private javax.swing.JButton btnMultiplicarJGF;
+    private javax.swing.JButton btnRestarJGF;
+    private javax.swing.JButton btnSalirJGF;
+    private javax.swing.JButton btnSumarJGF;
     private javax.swing.JTextField cajados;
     private javax.swing.JTextField cajatres;
     private javax.swing.JTextField cajauno;
@@ -1485,6 +1677,9 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JPanel jpanel1;
+    private javax.swing.JLabel lblPrimerNumeroJGF;
+    private javax.swing.JLabel lblResultadoJGF;
+    private javax.swing.JLabel lblSegundoNumeroJGF;
     private javax.swing.JButton limpia_ra;
     private javax.swing.JButton limpia_sergio;
     private javax.swing.JButton multiplica_ra;
@@ -1513,6 +1708,9 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JLabel textodos;
     private javax.swing.JLabel textotres2;
     private javax.swing.JLabel textouno;
+    private javax.swing.JTextField txtPrimerNumeroJGF;
+    private javax.swing.JTextField txtResultadoJGF;
+    private javax.swing.JTextField txtSegundoNumeroJGF;
     private javax.swing.JTextField txtresultado;
     // End of variables declaration//GEN-END:variables
 }
