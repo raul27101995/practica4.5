@@ -851,12 +851,12 @@ public class PanelesCalculadora extends javax.swing.JFrame {
 
         botonrestar_Hicham.setText("Restar");
         botonrestar_Hicham.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
                 botonrestar_HichamAncestorRemoved(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         botonrestar_Hicham.addActionListener(new java.awt.event.ActionListener() {
@@ -892,25 +892,23 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(texto1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                        .addComponent(texto2)))
+                    .addComponent(texto1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                    .addComponent(texto2))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel14Layout.createSequentialGroup()
-                            .addComponent(multiplicacion_Hicham)
-                            .addGap(18, 18, 18)
-                            .addComponent(sumar_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel14Layout.createSequentialGroup()
-                            .addComponent(division_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botonrestar_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(division_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonrestar_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(multiplicacion_Hicham)
+                        .addGap(18, 18, 18)
+                        .addComponent(sumar_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(botonlimpiar1_Hicham)
                         .addGap(18, 18, 18)
                         .addComponent(botonsalir3_Hicham, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(201, 201, 201))
+                .addGap(201, 231, Short.MAX_VALUE))
         );
 
         jPanel14Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botonlimpiar1_Hicham, botonrestar_Hicham, botonsalir3_Hicham, division_Hicham, multiplicacion_Hicham, sumar_Hicham});
@@ -1086,17 +1084,17 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonsalir3_HichamActionPerformed1
 
     private void division_HichamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_division_HichamActionPerformed
-        int a= Integer.parseInt(texto1.getText());
-        int b= Integer.parseInt(texto2.getText());
-        int division1= a/b;
+        double a= Integer.parseInt(texto1.getText());
+        double b= Integer.parseInt(texto2.getText());
+        double division1= a/b;
         String cadenaDivision= String.valueOf(division1);
         resultado.setText(cadenaDivision);
     }//GEN-LAST:event_division_HichamActionPerformed
 
     private void sumar_HichamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumar_HichamActionPerformed
-        int a= Integer.parseInt(texto1.getText());
-        int b= Integer.parseInt(texto2.getText());
-        int suma= a+b;
+        double a= Integer.parseInt(texto1.getText());
+        double b= Integer.parseInt(texto2.getText());
+        double suma= a+b;
         String cadenaSuma= String.valueOf(suma);
         resultado.setText(cadenaSuma);
     }//GEN-LAST:event_sumar_HichamActionPerformed
@@ -1106,18 +1104,18 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonrestar_HichamAncestorRemoved
 
     private void botonrestar_HichamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonrestar_HichamActionPerformed
-        int a= Integer.parseInt(texto1.getText());
-        int b= Integer.parseInt(texto2.getText());
-        int resta= a-b;
+        double a= Integer.parseInt(texto1.getText());
+        double b= Integer.parseInt(texto2.getText());
+        double resta= a-b;
         String cadenaResta= String.valueOf(resta);
         resultado.setText(cadenaResta);
 
     }//GEN-LAST:event_botonrestar_HichamActionPerformed
 
     private void multiplicacion_HichamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacion_HichamActionPerformed
-        int a= Integer.parseInt(texto1.getText());
-        int b= Integer.parseInt(texto2.getText());
-        int multiplicacion1= a*b;
+        double a= Integer.parseInt(texto1.getText());
+        double b= Integer.parseInt(texto2.getText());
+        double multiplicacion1= a*b;
         String cadenaMultiplicacion= String.valueOf(multiplicacion1);
         resultado.setText(cadenaMultiplicacion);
     }//GEN-LAST:event_multiplicacion_HichamActionPerformed
