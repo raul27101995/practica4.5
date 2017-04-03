@@ -132,6 +132,15 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         borrar = new javax.swing.JButton();
         salir = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
+        textopedro = new javax.swing.JTextField();
+        texto2pedro = new javax.swing.JTextField();
+        texto3pedro = new javax.swing.JTextField();
+        botonlimpiar1_pedro = new javax.swing.JButton();
+        division_pedro = new javax.swing.JButton();
+        multiplicacion_pedro = new javax.swing.JButton();
+        sumar_pedro = new javax.swing.JButton();
+        botonrestar_pedro = new javax.swing.JButton();
+        botonsalir_pedro = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         botonlimpiar1_Hicham = new javax.swing.JButton();
         botonsalir3_Hicham = new javax.swing.JButton();
@@ -1142,15 +1151,118 @@ public class PanelesCalculadora extends javax.swing.JFrame {
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Pedro"));
 
+        textopedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textopedroActionPerformed(evt);
+            }
+        });
+
+        texto2pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                texto2pedroActionPerformed(evt);
+            }
+        });
+
+        botonlimpiar1_pedro.setText("Limpiar");
+        botonlimpiar1_pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonlimpiar1_pedroActionPerformed(evt);
+            }
+        });
+
+        division_pedro.setText("Dividir");
+        division_pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                division_pedroActionPerformed(evt);
+            }
+        });
+
+        multiplicacion_pedro.setText("Multiplicar");
+        multiplicacion_pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicacion_pedroActionPerformed(evt);
+            }
+        });
+
+        sumar_pedro.setText("Sumar");
+        sumar_pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumar_pedroActionPerformed(evt);
+            }
+        });
+
+        botonrestar_pedro.setText("Restar");
+        botonrestar_pedro.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+                botonrestar_pedroAncestorRemoved(evt);
+            }
+        });
+        botonrestar_pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonrestar_pedroActionPerformed(evt);
+            }
+        });
+
+        botonsalir_pedro.setText("Salir");
+        botonsalir_pedro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonsalir_pedroActionPerformed1(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(texto3pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textopedro, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(texto2pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(multiplicacion_pedro)
+                        .addGap(10, 10, 10)
+                        .addComponent(sumar_pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(division_pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonlimpiar1_pedro))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonsalir_pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonrestar_pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 262, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sumar_pedro)
+                    .addComponent(textopedro, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(multiplicacion_pedro))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(division_pedro)
+                            .addComponent(botonrestar_pedro)))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(texto2pedro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(texto3pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonlimpiar1_pedro))
+                    .addComponent(botonsalir_pedro, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel13);
@@ -1727,6 +1839,57 @@ public class PanelesCalculadora extends javax.swing.JFrame {
        System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
+    private void textopedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textopedroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textopedroActionPerformed
+
+    private void texto2pedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_texto2pedroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_texto2pedroActionPerformed
+
+    private void botonlimpiar1_pedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonlimpiar1_pedroActionPerformed
+        textopedro.setText("");
+        texto2pedro.setText("");
+        texto3pedro.setText("");
+    }//GEN-LAST:event_botonlimpiar1_pedroActionPerformed
+
+    private void division_pedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_division_pedroActionPerformed
+         double num1 = Double.parseDouble(textopedro.getText());
+       double num2 = Double.parseDouble(texto2pedro.getText());
+       texto3pedro.setText(String.valueOf(num1/num2));
+    }//GEN-LAST:event_division_pedroActionPerformed
+
+    private void multiplicacion_pedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacion_pedroActionPerformed
+        double num1 = Double.parseDouble(textopedro.getText());
+       double num2 = Double.parseDouble(texto2pedro.getText());
+       texto3pedro.setText(String.valueOf(num1*num2));
+    }//GEN-LAST:event_multiplicacion_pedroActionPerformed
+
+    private void sumar_pedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumar_pedroActionPerformed
+         double num1 = Double.parseDouble(textopedro.getText());
+       double num2 = Double.parseDouble(texto2pedro.getText());
+       texto3pedro.setText(String.valueOf(num1+num2));
+                                       
+
+    
+    }//GEN-LAST:event_sumar_pedroActionPerformed
+
+    private void botonrestar_pedroAncestorRemoved(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_botonrestar_pedroAncestorRemoved
+                                             
+     
+                                          
+    }//GEN-LAST:event_botonrestar_pedroAncestorRemoved
+
+    private void botonrestar_pedroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonrestar_pedroActionPerformed
+     double num1 = Double.parseDouble(textopedro.getText());
+       double num2 = Double.parseDouble(texto2pedro.getText());
+       texto3pedro.setText(String.valueOf(num1-num2));
+    }//GEN-LAST:event_botonrestar_pedroActionPerformed
+
+    private void botonsalir_pedroActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonsalir_pedroActionPerformed1
+         System.exit(0);
+    }//GEN-LAST:event_botonsalir_pedroActionPerformed1
+
     /**
      * @param args the command line arguments
      */
@@ -1779,13 +1942,16 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonlimpia;
     private javax.swing.JButton botonlimpiar;
     private javax.swing.JButton botonlimpiar1_Hicham;
+    private javax.swing.JButton botonlimpiar1_pedro;
     private javax.swing.JButton botonmultiplica;
     private javax.swing.JButton botonmultiplicar;
     private javax.swing.JButton botonresta;
     private javax.swing.JButton botonrestar;
     private javax.swing.JButton botonrestar_Hicham;
+    private javax.swing.JButton botonrestar_pedro;
     private javax.swing.JButton botonsalir;
     private javax.swing.JButton botonsalir3_Hicham;
+    private javax.swing.JButton botonsalir_pedro;
     private javax.swing.JButton botonsuma;
     private javax.swing.JButton botonsumar;
     private javax.swing.JButton btnDividirJGF;
@@ -1801,6 +1967,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton divide_ra;
     private javax.swing.JButton dividir_sergio;
     private javax.swing.JButton division_Hicham;
+    private javax.swing.JButton division_pedro;
     private javax.swing.JTextField dulcenumero1;
     private javax.swing.JTextField dulcenumero2;
     private javax.swing.JTextField dulceresultado;
@@ -1849,6 +2016,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton multiplica_ra;
     private javax.swing.JButton multiplica_sergio;
     private javax.swing.JButton multiplicacion_Hicham;
+    private javax.swing.JButton multiplicacion_pedro;
     private javax.swing.JTextField num1_sergio;
     private javax.swing.JTextField num2_sergio;
     private javax.swing.JTextField numero1;
@@ -1871,9 +2039,13 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton suma_ra;
     private javax.swing.JButton suma_sergio;
     private javax.swing.JButton sumar_Hicham;
+    private javax.swing.JButton sumar_pedro;
     private javax.swing.JTextField texto1;
     private javax.swing.JTextField texto2;
+    private javax.swing.JTextField texto2pedro;
+    private javax.swing.JTextField texto3pedro;
     private javax.swing.JLabel textodos;
+    private javax.swing.JTextField textopedro;
     private javax.swing.JLabel textotres2;
     private javax.swing.JLabel textouno;
     private javax.swing.JTextField txtPrimerNumeroJGF;
