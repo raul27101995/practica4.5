@@ -104,6 +104,19 @@ public class PanelesCalculadora extends javax.swing.JFrame {
         numerouno_ra = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        lblPrimerNumero = new javax.swing.JLabel();
+        txtPrimerNumero = new javax.swing.JTextField();
+        lblSegundoNumero = new javax.swing.JLabel();
+        txtSegundoNumero = new javax.swing.JTextField();
+        lblResultado = new javax.swing.JLabel();
+        txtResultado = new javax.swing.JTextField();
+        btnSumar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        brnRestar = new javax.swing.JButton();
+        btnMultiplicar = new javax.swing.JButton();
+        btnDividir = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         lblPrimerNumeroJGF = new javax.swing.JLabel();
         lblSegundoNumeroJGF = new javax.swing.JLabel();
@@ -279,7 +292,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
                     .addComponent(botonsalir)
                     .addComponent(botonlimpiar)
                     .addComponent(botondividir))
-                .addGap(0, 141, Short.MAX_VALUE))
+                .addGap(0, 138, Short.MAX_VALUE))
         );
 
         getContentPane().add(jpanel1);
@@ -877,15 +890,133 @@ public class PanelesCalculadora extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Abdellah"));
 
+        lblPrimerNumero.setText("Primer Número  :");
+
+        lblSegundoNumero.setText("Segundo Número:");
+
+        lblResultado.setText("Resultado:");
+
+        btnSumar.setText("Sumar");
+        btnSumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumarActionPerformed(evt);
+            }
+        });
+
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
+        brnRestar.setText("Restar");
+        brnRestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                brnRestarActionPerformed(evt);
+            }
+        });
+
+        btnMultiplicar.setText("Multiplicar");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarActionPerformed(evt);
+            }
+        });
+
+        btnDividir.setText("Dividir");
+        btnDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividirActionPerformed(evt);
+            }
+        });
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnLimpiar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSegundoNumero)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(lblResultado)))
+                        .addGap(20, 20, 20)
+                        .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMultiplicar)
+                    .addComponent(brnRestar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 89, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtSegundoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(lblPrimerNumero)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtPrimerNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPrimerNumero)
+                    .addComponent(txtPrimerNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSumar))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblSegundoNumero)
+                    .addComponent(txtSegundoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(brnRestar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMultiplicar))
+                    .addComponent(lblResultado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnLimpiar)
+                        .addComponent(btnSalir))
+                    .addComponent(btnDividir))
+                .addContainerGap(154, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 262, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel9);
@@ -1954,11 +2085,17 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonsalir_pedro;
     private javax.swing.JButton botonsuma;
     private javax.swing.JButton botonsumar;
+    private javax.swing.JButton brnRestar;
+    private javax.swing.JButton btnDividir;
     private javax.swing.JButton btnDividirJGF;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnLimpiarJGF;
+    private javax.swing.JButton btnMultiplicar;
     private javax.swing.JButton btnMultiplicarJGF;
     private javax.swing.JButton btnRestarJGF;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnSalirJGF;
+    private javax.swing.JButton btnSumar;
     private javax.swing.JButton btnSumarJGF;
     private javax.swing.JTextField cajados;
     private javax.swing.JTextField cajatres;
@@ -1992,6 +2129,7 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
@@ -2007,8 +2145,11 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JPanel jpanel1;
+    private javax.swing.JLabel lblPrimerNumero;
     private javax.swing.JLabel lblPrimerNumeroJGF;
+    private javax.swing.JLabel lblResultado;
     private javax.swing.JLabel lblResultadoJGF;
+    private javax.swing.JLabel lblSegundoNumero;
     private javax.swing.JLabel lblSegundoNumeroJGF;
     private javax.swing.JButton limpia_ra;
     private javax.swing.JButton limpia_sergio;
@@ -2048,8 +2189,11 @@ public class PanelesCalculadora extends javax.swing.JFrame {
     private javax.swing.JTextField textopedro;
     private javax.swing.JLabel textotres2;
     private javax.swing.JLabel textouno;
+    private javax.swing.JTextField txtPrimerNumero;
     private javax.swing.JTextField txtPrimerNumeroJGF;
+    private javax.swing.JTextField txtResultado;
     private javax.swing.JTextField txtResultadoJGF;
+    private javax.swing.JTextField txtSegundoNumero;
     private javax.swing.JTextField txtSegundoNumeroJGF;
     private javax.swing.JTextField txtresultado;
     // End of variables declaration//GEN-END:variables
